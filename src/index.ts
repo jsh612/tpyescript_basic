@@ -1,18 +1,26 @@
-class Human {
-  public name: string;
-  private age: number; // private으로 설정되어 외부에서 age를 불러올 수 없다
-  public gender: string;
-  constructor(name: string, age: number, gender: string) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+class Block {
+  public index: number;
+  public hash: string;
+  public previousHash: string;
+  public data: string;
+  public timestamp: number;
+  constructor(
+    index: number,
+    hash: string,
+    previousHash: string,
+    data: string,
+    timestamp: number
+  ) {
+    this.index = index;
+    this.hash = hash;
+    this.previousHash = previousHash;
+    this.data = data;
+    this.timestamp = timestamp;
   }
 }
 
-const jsh = new Human("jsh", 20, "female");
+const genesisBlock: Block = new Block(0, "20202020202", "", "hello", 12345);
 
-const sayHi = (person: Human): string => {
-  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}!`;
-};
+const blockchain: [Block] = [genesisBlock];
 
-console.log(sayHi(jsh));
+console.log(blockchain);

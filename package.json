@@ -1,0 +1,9 @@
+{
+  "name": "tpyescript_basic",
+  "version": "1.0.0",
+  "description": "typescript basic",
+  "main": "index.js",
+  "repository": "https://github.com/jsh612/tpyescript_basic.git",
+  "author": "seungho Jeon <urijsh612@gmail.com>",
+  "license": "MIT"
+}
